@@ -19,7 +19,7 @@ const Profile = () => {
   // const { reload } = useSelector((state) => state.boolean);
 
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/userInfo/${user.email}`)
+    fetch(`https://redux-server-53il.onrender.com/userInfo/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setUserInfo(data);
@@ -30,7 +30,7 @@ const Profile = () => {
   // console.log(reload);
 
   const onSubmit = (data) => {
-    const url = `https://redux-learning-server.herokuapp.com/userInfo/${user.email}`;
+    const url = `https://redux-server-53il.onrender.com/userInfo/${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {

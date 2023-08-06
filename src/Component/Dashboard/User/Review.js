@@ -7,7 +7,7 @@ const Review = () => {
 
     const onSubmit = data => {
 
-        const url = 'https://redux-learning-server.herokuapp.com/reviews';
+        const url = 'https://redux-server-53il.onrender.com/reviews';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -64,7 +64,7 @@ const Review = () => {
                     <input type="text" placeholder="Tool Description" className="input input-bordered w-full max-w-xs" {...register("description", {
                         required: {
                             value: true
-                        }   
+                        }
                     })} />
                 </div>
 
@@ -74,7 +74,7 @@ const Review = () => {
                     </label>
                     <input type="url" placeholder="url" className="input input-bordered w-full max-w-xs" {...register("img", { required: true })} />
                 </div>
-                
+
                 <button type='submit' className="btn btn-outline button  w-24 mt-8">Add Review</button>
 
             </form>

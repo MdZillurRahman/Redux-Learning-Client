@@ -5,7 +5,7 @@ const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 export const fetchQuizzes = createAsyncThunk(
   "quizzes/fetchQuizzes",
   async (name) => {
-    const res = await axios.get("https://redux-learning-server.herokuapp.com/doc");
+    const res = await axios.get("https://redux-server-53il.onrender.com/doc");
     const final = res?.data?.filter(a => a.nestedRoute===name)
     const ques = final[0].content
     return ques;
@@ -13,7 +13,7 @@ export const fetchQuizzes = createAsyncThunk(
 );
 
 export const postQuizzes = createAsyncThunk("routes/postRoutes", async (variables) => {
-  const res = await axios.post("https://redux-learning-server.herokuapp.com/doc", variables);
+  const res = await axios.post("https://redux-server-53il.onrender.com/doc", variables);
   return res.data;
 });
 

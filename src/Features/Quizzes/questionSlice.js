@@ -6,7 +6,7 @@ export const fetchQuestion = createAsyncThunk(
   "question/fetchQuestion",
   async ({name, count}) => {
     const res = await axios.get(
-      "https://redux-learning-server.herokuapp.com/doc"
+      "https://redux-server-53il.onrender.com/doc"
     );
     const final = res?.data?.filter((a) => a.nestedRoute === name);
     const ques = final[0].content;

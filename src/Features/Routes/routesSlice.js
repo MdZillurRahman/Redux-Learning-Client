@@ -3,12 +3,12 @@ import axios from "axios";
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 export const fetchRoutes = createAsyncThunk("routes/fetchRoutes", async () => {
-  const res = await axios.get("https://redux-learning-server.herokuapp.com/routes");
+  const res = await axios.get("https://redux-server-53il.onrender.com/routes");
   return res.data;
 });
 
 export const postRoutes = createAsyncThunk("routes/postRoutes", async (variables) => {
-  const res = await axios.post("https://redux-learning-server.herokuapp.com/routes", variables);
+  const res = await axios.post("https://redux-server-53il.onrender.com/routes", variables);
   return res.data;
 });
 

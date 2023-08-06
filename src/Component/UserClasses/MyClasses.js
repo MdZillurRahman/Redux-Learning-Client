@@ -48,7 +48,7 @@ const MyClasses = () => {
   useEffect(() => {
     async function Data() {
       const fetchData = await fetch(
-        "https://redux-learning-server.herokuapp.com/doc"
+        "https://redux-server-53il.onrender.com/doc"
       );
       const res = await fetchData.json();
       const con = res.filter((a) => a.pathRoute === blog2);
@@ -62,7 +62,7 @@ const MyClasses = () => {
   // console.log(blogs);
 
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/progress/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -80,7 +80,7 @@ const MyClasses = () => {
   }, [dispatch, q, routes.length, user?.email]);
 
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/progress/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -142,7 +142,7 @@ const MyClasses = () => {
 
     // console.log(progressBar);
     axios
-      .put(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`, progressBar)
+      .put(`https://redux-server-53il.onrender.com/progress/${user?.email}`, progressBar)
       .then((response) => {
         if (response) {
           // console.log(response);
@@ -158,7 +158,7 @@ const MyClasses = () => {
       position: total,
     };
     axios
-      .put(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`, progressBarFinal)
+      .put(`https://redux-server-53il.onrender.com/progress/${user?.email}`, progressBarFinal)
       .then((response) => {
         if (response) {
           // console.log(response);

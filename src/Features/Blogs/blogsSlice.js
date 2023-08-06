@@ -3,7 +3,7 @@ import axios from "axios";
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 export const fetchBlogs = createAsyncThunk("blogs/fetchBlogs", async () => {
-  const res = await axios.get("https://redux-learning-server.herokuapp.com/doc");
+  const res = await axios.get("https://redux-server-53il.onrender.com/doc");
   return res.data;
 });
 
@@ -21,7 +21,7 @@ const blogsSlice = createSlice({
     });
     builder.addCase(fetchBlogs.fulfilled, (state, action) => {
       state.isLoading = false;
-      
+
       state.blogs = action.payload;
       state.error = null;
     });

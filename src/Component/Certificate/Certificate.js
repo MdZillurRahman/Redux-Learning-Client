@@ -13,7 +13,7 @@ const Certificate = () => {
 
   useEffect(() => {
     fetch(
-      `https://redux-learning-server.herokuapp.com/userAnswer/${user?.email}`
+      `https://redux-server-53il.onrender.com/userAnswer/${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {

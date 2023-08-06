@@ -10,7 +10,7 @@ const ShowAnswer = ({ quiz }) => {
   const [selectedAns, setSelectedAns] = useState([]);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/userAnswer/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/userAnswer/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         const q = data.filter((a) => a.quizTitle === quiz);

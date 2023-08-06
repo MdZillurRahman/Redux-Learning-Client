@@ -14,7 +14,7 @@ const User = ({ u, index, setDeletingUser }) => {
   };
 
   const makeAdmin = () => {
-    fetch(`http://localhost:5000/users/admin/${u.email}`, {
+    fetch(`https://redux-server-53il.onrender.com/users/admin/${u.email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

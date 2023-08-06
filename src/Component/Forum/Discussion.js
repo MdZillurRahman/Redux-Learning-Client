@@ -43,11 +43,11 @@ const Discussion = ({ discussion }) => {
 
 
     async function Data() {
-      const fetchData = await fetch(`https://redux-learning-server.herokuapp.com/forumsAnswer/${discussion._id}`);
+      const fetchData = await fetch(`https://redux-server-53il.onrender.com/forumsAnswer/${discussion._id}`);
       const res = await fetchData.json();
       setAnswers(res);
       // dispatch(handleIsLoading());
-      setIsLoading(!isLoading);
+      setIsLoading(prevState => !prevState);
     }
     Data();
   }, [discussion._id, isLoading]);
@@ -63,12 +63,14 @@ const Discussion = ({ discussion }) => {
       ans: answer,
     };
     // dispatch(postComment(answers));
-    
+
     // toast("Comment Created!");
     // inputAnswer.current.value = "";
 
+    console.log(answers);
+
     axios
-      .post("https://redux-learning-server.herokuapp.com/forumsAnswer", answers)
+      .post("https://redux-server-53il.onrender.com/forumsAnswer", answers)
       .then((response) => {
         if (response) {
           toast("Comment Created!");

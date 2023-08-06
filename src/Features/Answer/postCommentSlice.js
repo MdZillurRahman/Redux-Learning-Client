@@ -7,7 +7,7 @@ export const fetchComment = createAsyncThunk(
   "comment/fetchComment",
   async (id) => {
     const res = await axios.get(
-      `https://redux-learning-server.herokuapp.com/forumsAnswer/${id}`
+      `https://redux-server-53il.onrender.com/forumsAnswer/${id}`
     );
     // console.log(res.data);
     return res.data;
@@ -18,7 +18,7 @@ export const postComment = createAsyncThunk(
   "routes/postRoutes",
   async (variables) => {
     const res = await axios.post(
-      "https://redux-learning-server.herokuapp.com/forumsAnswer",
+      "https://redux-server-53il.onrender.com/forumsAnswer",
       variables
     );
     return res.data;

@@ -50,7 +50,7 @@ const SignUp = () => {
     const currentUser = { email: data.email, role: "", gem: 10 };
     // console.log(currentUser);
 
-    fetch("https://redux-learning-server.herokuapp.com/users", {
+    fetch("https://redux-server-53il.onrender.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -69,7 +69,7 @@ const SignUp = () => {
       position: 1,
     };
 
-    fetch("https://redux-learning-server.herokuapp.com/progress", {
+    fetch("https://redux-server-53il.onrender.com/progress", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -198,7 +198,7 @@ const SignUp = () => {
             </Link>{" "}
           </p>
 
-          {/* social login process start here 
+          {/* social login process start here
           <div className="divider  text-lg">or</div>
           <SocialLogin></SocialLogin> */}
         </div>

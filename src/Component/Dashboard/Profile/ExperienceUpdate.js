@@ -20,7 +20,7 @@ const ExperienceUpdate = () => {
         const time3 = e.target.time3.value;
         const data = { experience1, description1, time1, experience2, description2, time2, experience3, description3, time3 };
 
-        fetch(`http://localhost:5000/experience/${email}`, {
+        fetch(`https://redux-server-53il.onrender.com/experience/${email}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

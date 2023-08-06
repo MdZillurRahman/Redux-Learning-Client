@@ -29,9 +29,9 @@ const SkillsUpdate = () => {
     console.log(html, css, js, tailwind, redux, nextjs, bs, daisy);
     const data = { html, css, js, tailwind, redux, nextjs, bs, daisy, email };
 
-    // fetch(`http://localhost:5000/skills/${email}`)
+    // fetch(`https://redux-server-53il.onrender.com/skills/${email}`)
 
-    fetch(`http://localhost:5000/skills/${email}`, {
+    fetch(`https://redux-server-53il.onrender.com/skills/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

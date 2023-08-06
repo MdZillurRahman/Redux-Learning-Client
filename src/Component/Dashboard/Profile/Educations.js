@@ -11,7 +11,7 @@ const Educations = () => {
   const email = user?.email;
   const { reload } = useSelector((state) => state.boolean);
   useEffect(() => {
-    fetch(`http://localhost:5000/education/${user.email}`)
+    fetch(`https://redux-server-53il.onrender.com/education/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setEducation(data);

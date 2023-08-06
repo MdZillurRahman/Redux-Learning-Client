@@ -31,7 +31,7 @@ const Navbar = ({ themeToggler, theme }) => {
 
   useEffect(() => {
     dispatch(fetchUsers());
-    fetch(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/progress/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -137,7 +137,7 @@ const Navbar = ({ themeToggler, theme }) => {
             Getting Started
           </Link>
           {/* </label> */}
-          {/* 
+          {/*
           <Link to="/tutorial" className="hover:bg-green-100 hover:text-black">
             Tutorial
           </Link> */}

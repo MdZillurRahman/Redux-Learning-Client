@@ -31,7 +31,7 @@ const SocialLogin = () => {
     //     const currentUser = { email: user?.user?.email, role: "", gem: 10 };
     //     console.log(currentUser);
 
-    //     fetch("https://redux-learning-server.herokuapp.com/users", {
+    //     fetch("https://redux-server-53il.onrender.com/users", {
     //       method: "POST",
     //       headers: {
     //         "content-type": "application/json",

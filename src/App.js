@@ -5,7 +5,7 @@ import SignUp from "./Component/Authentication/SignUp";
 import GettingStarted from "./Component/GettingStarted/GettingStarted";
 // import Home from "./Component/Home/Home";
 // import Tutorial from "./Component/Tutorial/Tutorial";
-// import Footer from "./Shared/Footer/Footer";
+import Footer from "./Shared/Footer/Footer";
 import Navbar from "./Shared/Navbar/Navbar";
 import NotFound from "./Shared/NotFound/NotFound";
 import { ToastContainer } from "react-toastify";
@@ -66,7 +66,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchRoutes());
-    fetch(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/progress/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -261,7 +261,7 @@ function App() {
           </Route>
         </Routes>
 
-        
+        <Footer/>
         <ToastContainer />
       </StyledApp>
       <Chat></Chat>

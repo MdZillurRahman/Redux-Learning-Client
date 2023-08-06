@@ -10,7 +10,7 @@ const Analysis = () => {
   const [progress, setProgress] = useState(0);
   const [user] = useAuthState(auth);
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/userAnswer/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/userAnswer/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -19,7 +19,7 @@ const Analysis = () => {
   }, [user?.email]);
 
   useEffect(() => {
-    fetch(`https://redux-learning-server.herokuapp.com/progress/${user?.email}`)
+    fetch(`https://redux-server-53il.onrender.com/progress/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

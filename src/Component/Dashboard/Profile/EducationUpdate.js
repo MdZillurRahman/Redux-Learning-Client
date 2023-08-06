@@ -22,7 +22,7 @@ const EducationUpdate = () => {
         console.log(university, universitySub, universityYear, college, collegeYear, collegeGroup, schoolGroup, school, schoolYear,);
         const data = { university, universitySub, universityYear, college, collegeYear, collegeGroup, schoolGroup, school, schoolYear }
 
-        fetch(`http://localhost:5000/education/${email}`, {
+        fetch(`https://redux-server-53il.onrender.com/education/${email}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

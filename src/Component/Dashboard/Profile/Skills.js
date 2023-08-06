@@ -13,7 +13,7 @@ const Skills = () => {
     const email = user?.email;
     const { reload } = useSelector((state) => state.boolean);
     useEffect(() => {
-        fetch(`http://localhost:5000/skills/${user.email}`)
+        fetch(`https://redux-server-53il.onrender.com/skills/${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setSkills(data);

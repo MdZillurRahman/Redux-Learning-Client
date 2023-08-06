@@ -12,7 +12,7 @@ const Experiences = () => {
     const [experience, setExperience] = useState({})
     const { reload } = useSelector((state) => state.boolean);
     useEffect(() => {
-        fetch(`http://localhost:5000/experience/${user.email}`)
+        fetch(`https://redux-server-53il.onrender.com/experience/${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setExperience(data);

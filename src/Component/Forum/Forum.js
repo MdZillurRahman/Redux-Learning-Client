@@ -24,7 +24,7 @@ const Forum = () => {
     // console.log(isAskOpen);
 
     useEffect(() => {
-        fetch("https://redux-learning-server.herokuapp.com/forums")
+        fetch("https://redux-server-53il.onrender.com/forums")
             .then((res) => res.json())
             .then((data) => {
                 setDiscussions(data)
@@ -46,7 +46,7 @@ const Forum = () => {
             date: formattedDate,
         };
 
-        axios.post("https://redux-learning-server.herokuapp.com/forums", post).then((response) => {
+        axios.post("https://redux-server-53il.onrender.com/forums", post).then((response) => {
             if (response) {
                 toast("Post Created!");
                 askedQuestions.current.value = "";
@@ -59,8 +59,8 @@ const Forum = () => {
         // dispatch(handleIsAskOpen())
     };
 
-    
-    
+
+
     return (
         <div className="grid grid-flow-row-dense grid-cols-10 pt-20">
             <div className="col-span-10 md:col-span-8 mx-4 md:mx-20 order-2 md:order-1">
@@ -95,7 +95,7 @@ const Forum = () => {
                             placeholder="Write your question here"
                             className="textarea textarea-bordered w-full mt-3"
                             onChange={(e) => setIsValid(e.target.value)}
-                            ref={askedQuestions}    
+                            ref={askedQuestions}
                         />{" "}
                         <br />
                         <button

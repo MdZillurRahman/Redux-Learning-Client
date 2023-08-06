@@ -24,7 +24,7 @@ const AddRouteContent = () => {
   const handleNestedRoutes = (e) => {
     e.preventDefault();
     const nested = inputNestedRoute.current.value;
-    
+
     const iD = nestedRoute?.content?.filter(a => a.nestedRoute === nested);
     setDocID(iD[0].idNumber)
   };
@@ -35,8 +35,8 @@ const AddRouteContent = () => {
     const route = inputRoute.current.value;
     const nestedRoute = inputNestedRoute.current.value;
     const doc = inputContent.current.value;
-    
-    
+
+
     const content = {
       route: route,
       nestedRoute: nestedRoute,
@@ -45,7 +45,7 @@ const AddRouteContent = () => {
     };
     // console.log(content);
 
-    axios.post("https://redux-learning-server.herokuapp.com/doc", content).then((response) => {
+    axios.post("https://redux-server-53il.onrender.com/doc", content).then((response) => {
       if (response) {
         alert("Post Created!");
       }
@@ -76,7 +76,7 @@ const AddRouteContent = () => {
             </datalist>{" "}
             <br />
             <label>Nested Route Name</label> <br />
-            <input 
+            <input
             onChange={(e) => handleNestedRoutes(e)}
               placeholder="Select Nested Route"
               className="border-2 p-2 rounded mb-3 w-full text-black "

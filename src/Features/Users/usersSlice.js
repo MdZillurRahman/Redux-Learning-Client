@@ -3,11 +3,11 @@ import axios from "axios";
 const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 export const deleteUsers = createAsyncThunk("users/deleteUsers", async (email) => {
-  const res = await axios.delete(`https://redux-learning-server.herokuapp.com/users/${email}`);
+  const res = await axios.delete(`https://redux-server-53il.onrender.com/users/${email}`);
   return res.data;
 });
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const res = await axios.get("https://redux-learning-server.herokuapp.com/users");
+  const res = await axios.get("https://redux-server-53il.onrender.com/users");
   return res.data;
 });
 
