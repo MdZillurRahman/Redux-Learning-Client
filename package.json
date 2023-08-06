@@ -13,7 +13,7 @@
     "axios": "^0.27.2",
     "daisyui": "^2.22.0",
     "dompurify": "^2.3.10",
-    "firebase": "^9.9.0",
+    "firebase": "^9.23.0",
     "highlight.js": "^11.6.0",
     "jsdom": "^20.0.0",
     "moment": "^2.29.4",
@@ -59,7 +59,11 @@
     ]
   },
   "browserslist": {
-
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
